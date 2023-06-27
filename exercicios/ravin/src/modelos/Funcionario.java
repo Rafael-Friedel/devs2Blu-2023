@@ -5,12 +5,13 @@ import java.util.Date;
 import enums.Disponibilidade;
 import enums.Escolaridade;
 import enums.EstadoCivil;
+import enums.Cargo;
 
 public class Funcionario extends Pessoa {
 	private String rg;
 	private EstadoCivil estadoCivil;
 	private Escolaridade escolaridade;
-	private String cargo;
+	private Cargo cargo;
 	private String numeroCarteiraTrabalho;
 	private Date dataAdmissão;
 	private Date dataDemissão;
@@ -34,10 +35,10 @@ public class Funcionario extends Pessoa {
 	public void setEscolaridade(Escolaridade escolaridade) {
 		this.escolaridade = escolaridade;
 	}
-	public String getCargo() {
+	public Cargo getCargo() {
 		return cargo;
 	}
-	public void setCargo(String cargo) {
+	public void setCargo(Cargo cargo) {
 		this.cargo = cargo;
 	}
 	public String getNumeroCarteiraTrabalho() {
