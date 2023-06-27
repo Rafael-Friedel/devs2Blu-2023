@@ -1,6 +1,8 @@
 package modelos;
 import java.util.List;
 
+import enums.StatusComanda;
+
 public class Comanda {
   private Mesa mesa;
   private Cliente cliente;

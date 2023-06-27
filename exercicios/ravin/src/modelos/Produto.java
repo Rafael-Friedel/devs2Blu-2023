@@ -1,5 +1,8 @@
 package modelos;
 
+import enums.Status;
+import enums.StatusPreparo;
+
 public class Produto {
   private String nome;
   private String descricao;

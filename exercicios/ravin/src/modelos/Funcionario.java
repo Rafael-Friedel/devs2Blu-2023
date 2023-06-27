@@ -1,5 +1,11 @@
 package modelos;
 
+import java.util.Date;
+
+import enums.Disponibilidade;
+import enums.Escolaridade;
+import enums.EstadoCivil;
+
 public class Funcionario extends Pessoa {
   private String rg;
   private EstadoCivil estadoCivil;
@@ -8,5 +14,5 @@ public class Funcionario extends Pessoa {
   private String numeroCarteiraTrabalho;
   private Date dataAdmissão;
   private Date dataDemissão;
-  private String Disponibilidade disponibilidade;
+  private Disponibilidade disponibilidade;
 }
