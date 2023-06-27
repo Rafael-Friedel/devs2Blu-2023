@@ -6,9 +6,9 @@ import enums.StatusPreparo;
 public class Produto {
   private String nome;
   private String descricao;
-  private Integer codigo;
-  private Float precoCusto;
-  private Float precoVenda;
+  private String codigo;
+  private float precoCusto;
+  private float precoVenda;
   private StatusPreparo statusPreparo;
   private String tempoPreparo;
   private String observacoes;
@@ -26,10 +26,10 @@ public String getDescricao() {
 public void setDescricao(String descricao) {
 	this.descricao = descricao;
 }
-public Integer getCodigo() {
+public String getCodigo() {
 	return codigo;
 }
-public void setCodigo(Integer codigo) {
+public void setCodigo(String codigo) {
 	this.codigo = codigo;
 }
 public Float getPrecoCusto() {

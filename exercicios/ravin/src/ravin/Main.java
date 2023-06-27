@@ -1,5 +1,7 @@
 package ravin;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -17,6 +19,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		mostrarMenuPrincipal();
+		JOptionPane.showMessageDialog(null, montarMenuPrincipal());
+	}
+	
+	public static String montarMenuPrincipal() {	
+		StringBuilder builder = new StringBuilder();
+		builder.append("========================= RAVIN=========================== \n");
+		builder.append("\n");
+		builder.append("1 - Funcionario \n");
+		builder.append("2 - Client \n");
+		builder.append("3 - Produto \n");
+		builder.append("4 - Cardapio \n");
+		builder.append("5 - Mesa \n");
+		builder.append("6 - Pedido \n");
+		builder.append("7 - Sair \n");
+		return builder.toString();
 	}
 
 	public static void mostrarMenuPrincipal() {
@@ -116,4 +133,6 @@ public class Main {
 		comanda.setStatusComanda(StatusComanda.ABERTA);
 		return comanda;
 	}
+	
+
 }
