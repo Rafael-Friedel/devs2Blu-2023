@@ -6,7 +6,7 @@ import enums.StatusMesa;
 public class Mesa {
 	private Funcionario funcionario;
 	private String nome;
-    private Integer codigo;
+    private String codigo;
 	private Integer numero;
     private Status status;
 	private StatusMesa statusMesa;
@@ -25,10 +25,10 @@ public class Mesa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Integer getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 	public Integer getNumero() {

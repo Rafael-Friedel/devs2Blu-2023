@@ -2,6 +2,15 @@ package ravin;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
+import enums.StatusComanda;
+import enums.StatusMesa;
+import enums.StatusPreparo;
+import modelos.Comanda;
+import modelos.Mesa;
+import modelos.Pedido;
+
 public class Main {
 	
 	
@@ -80,5 +89,31 @@ public class Main {
 		opcaoSubMenu = scanner.nextInt();
 
 		return opcaoSubMenu;
+	}
+	
+	public static Pedido cadastrarPedido() {
+		Pedido pedido = new Pedido();
+		pedido.setDataHoraSolicitacao(new Timestamp(new Date().getTime()));
+		pedido.setObservacao(JOptionPane.showInputDialog("Observações:"));
+		pedido.setQuantidade(Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade:")));
+		pedido.setStatusPreparo(StatusPreparo.PREPARANDO);
+		return pedido;
+	}
+	
+	public static Mesa cadastrarMesa() {
+		Mesa mesa= new Mesa();
+		mesa.setCodigo(JOptionPane.showInputDialog("Digite o código da mesa:"));
+		mesa.setNome(JOptionPane.showInputDialog("Digite o nome da mesa:"));
+		mesa.setStatusMesa(StatusMesa.Livre);
+		return mesa;
+		
+	}
+	
+	public static Comanda cadastrarComanda() {
+		Comanda comanda = new Comanda();
+		comanda.setCodigo(JOptionPane.showInputDialog("Digite o código da comanda:"));
+		comanda.setObservacoes(JOptionPane.showInputDialog("Digite as observaçõs sobre a comanda:"));
+		comanda.setStatusComanda(StatusComanda.ABERTA);
+		return comanda;
 	}
 }

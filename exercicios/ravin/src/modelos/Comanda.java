@@ -6,9 +6,10 @@ import enums.StatusComanda;
 public class Comanda {
   private Mesa mesa;
   private Cliente cliente;
+  private String observacoes;
   private List<Produto> produtos;
   private StatusComanda statusComanda;
-  private Integer codigo;
+  private String codigo;
   private Float valorTotalComanda;
   
 	public Mesa getMesa() {
@@ -35,10 +36,10 @@ public class Comanda {
 	public void setStatusComanda(StatusComanda statusComanda) {
 		this.statusComanda = statusComanda;
 	}
-	public Integer getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 	public Float getValorTotalComanda() {
@@ -46,5 +47,11 @@ public class Comanda {
 	}
 	public void setValorTotalComanda(Float valorTotalComanda) {
 		this.valorTotalComanda = valorTotalComanda;
+	}
+	public String getObservacoes() {
+		return observacoes;
+	}
+	public void setObservacoes(String observacoes) {
+		this.observacoes = observacoes;
 	}
 }
