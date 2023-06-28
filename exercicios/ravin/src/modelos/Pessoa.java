@@ -6,11 +6,22 @@ import enums.Status;
 
 public class Pessoa {
 	private int id;
-    private String nome;
+	private String nome;
 	private String telefone;
 	private Date dataNascimento;
 	private String cpf;
 	private Status status;
+
+	public Pessoa(int id, String nome, String endereco, String telefone, String cpf, Date dataNascimento,
+			String observacao, Status ativo) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.dataNascimento = dataNascimento;
+		this.cpf = cpf;
+		this.status = ativo;
+	}
 
 	public String getNome() {
 		return nome;

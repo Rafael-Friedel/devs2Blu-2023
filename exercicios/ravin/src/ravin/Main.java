@@ -6,23 +6,23 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import enums.Status;
 import enums.StatusComanda;
 import enums.StatusMesa;
 import enums.StatusPreparo;
 import modelos.Comanda;
 import modelos.Mesa;
 import modelos.Pedido;
+import modelos.Pessoa;
 
 public class Main {
-	
-	
 
 	public static void main(String[] args) {
 		mostrarMenuPrincipal();
 		JOptionPane.showMessageDialog(null, montarMenuPrincipal());
 	}
-	
-	public static String montarMenuPrincipal() {	
+
+	public static String montarMenuPrincipal() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("========================= RAVIN=========================== \n");
 		builder.append("\n");
@@ -54,15 +54,15 @@ public class Main {
 
 			System.out.print("Opção -> ");
 			opcaoSelecionada = scanner.nextInt();
-			
+
 			System.out.print("\n");
-			
+
 			opcaoSubMenuSelecionada = mostrarMenuCadastros();
-			
+
 			switch (opcaoSelecionada) {
 			case 1:
 				System.out.println("### RAVIN - Mesas ###");
-				
+
 				break;
 			case 2:
 				System.out.println("### RAVIN - Comandas ###");
@@ -89,6 +89,21 @@ public class Main {
 		} while (opcaoSelecionada != 0);
 	}
 
+	public static Pessoa cadastrarPessoa() {
+		int id = Integer.parseInt(JOptionPane.showInputDialog("Digite um id"));
+		String nome = JOptionPane.showInputDialog("Digite o nome da pessoa");
+		String endereco = JOptionPane.showInputDialog("Digite o endereço da pessoa");
+		String telefone = JOptionPane.showInputDialog("Digite o telefone");
+		String cpf = JOptionPane.showInputDialog("Digite o CPF da pessoa");
+		Date dataNascimento = new Date();
+		String observacao = JOptionPane.showInputDialog("Digite alguma possível observação");
+		Status ativo = Status.ATIVO;
+
+		Pessoa pessoa = new Pessoa(id, nome, endereco, telefone, cpf, dataNascimento, observacao, ativo);
+
+		return pessoa;
+	}
+
 	public static int mostrarMenuCadastros() {
 		Scanner scanner = new Scanner(System.in);
 		int opcaoSubMenu = 0;
@@ -107,7 +122,7 @@ public class Main {
 
 		return opcaoSubMenu;
 	}
-	
+
 	public static Pedido cadastrarPedido() {
 		Pedido pedido = new Pedido();
 		pedido.setDataHoraSolicitacao(new Timestamp(new Date().getTime()));
@@ -116,16 +131,16 @@ public class Main {
 		pedido.setStatusPreparo(StatusPreparo.PREPARANDO);
 		return pedido;
 	}
-	
+
 	public static Mesa cadastrarMesa() {
-		Mesa mesa= new Mesa();
+		Mesa mesa = new Mesa();
 		mesa.setCodigo(JOptionPane.showInputDialog("Digite o código da mesa:"));
 		mesa.setNome(JOptionPane.showInputDialog("Digite o nome da mesa:"));
 		mesa.setStatusMesa(StatusMesa.Livre);
 		return mesa;
-		
+
 	}
-	
+
 	public static Comanda cadastrarComanda() {
 		Comanda comanda = new Comanda();
 		comanda.setCodigo(JOptionPane.showInputDialog("Digite o código da comanda:"));
@@ -133,6 +148,5 @@ public class Main {
 		comanda.setStatusComanda(StatusComanda.ABERTA);
 		return comanda;
 	}
-	
 
 }

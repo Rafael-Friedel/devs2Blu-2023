@@ -4,13 +4,12 @@ import java.sql.Timestamp;
 
 import enums.StatusPreparo;
 
-
 public class Pedido {
 	private Timestamp dataHoraSolicitacao;
 	private String observacao;
 	private Integer quantidade;
 	private StatusPreparo statusPreparo;
-	
+
 	public Timestamp getDataHoraSolicitacao() {
 		return dataHoraSolicitacao;
 	}
@@ -34,7 +33,6 @@ public class Pedido {
 	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
 	}
-
 
 	public StatusPreparo getStatusPreparo() {
 		return statusPreparo;

@@ -1,6 +1,5 @@
 package enums;
 
 public enum Disponibilidade {
-  OCUPADO,
-  DISPONIVEL
+	OCUPADO, DISPONIVEL
 }

@@ -1,7 +1,5 @@
 package enums;
 
 public enum StatusMesa {
-  Livre,
-  Reservada,
-  Ocupada
+	Livre, Reservada, Ocupada
 }
