@@ -37,6 +37,7 @@ public class FuncionarioRepository {
 		for (Funcionario funcionario : funcionarios) {
 			if (funcionario.getId() == id)
 				funcionarioBuscado = funcionario;
+				break;
 		}
 
 		return funcionarioBuscado;
@@ -50,8 +51,11 @@ public class FuncionarioRepository {
 		return funcionarios.size();
 	}
 	
-	public Funcionario buscarPorNome(String nome) {
-		return null;
+	public List<Funcionario> buscarPorNome(String nome) {
+		List<Funcionario> funcionariosFiltrados = funcionarios.stream()
+                .filter(funcionario -> funcionario.getNome().equals(nome))
+                .toList();
+		return funcionariosFiltrados;
 	}
 
 }
