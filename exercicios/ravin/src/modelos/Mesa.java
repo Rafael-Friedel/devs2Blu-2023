@@ -1,23 +1,61 @@
 package modelos;
 
+import java.util.List;
+
 import enums.Status;
 import enums.StatusMesa;
 
 public class Mesa {
-	private Funcionario funcionario;
+	private int id;
+	private Funcionario atendente;
+	private List<Comanda> comandas;
 	private String nome;
 	private String codigo;
-	private Integer numero;
-	private Status status;
+	private int numero;
 	private StatusMesa statusMesa;
-	private Integer quantidadeMaxPessoas;
 
-	public Funcionario getFuncionario() {
-		return funcionario;
+	public int getId() {
+		return id;
 	}
 
-	public void setFuncionario(Funcionario funcionario) {
-		this.funcionario = funcionario;
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Funcionario getAtendente() {
+		return atendente;
+	}
+
+	public void setAtendente(Funcionario atendente) {
+		this.atendente = atendente;
+	}
+
+	public List<Comanda> getComandas() {
+		return comandas;
+	}
+
+	public void setComandas(List<Comanda> comandas) {
+		this.comandas = comandas;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public Mesa() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Mesa(int id, Funcionario atendente, List<Comanda> comandas, String nome, String codigo, int numero,
+			StatusMesa statusMesa) {
+		super();
+		this.id = id;
+		this.atendente = atendente;
+		this.comandas = comandas;
+		this.nome = nome;
+		this.codigo = codigo;
+		this.numero = numero;
+		this.statusMesa = statusMesa;
 	}
 
 	public String getNome() {
@@ -44,28 +82,12 @@ public class Mesa {
 		this.numero = numero;
 	}
 
-	public Status getStatus() {
-		return status;
-	}
-
-	public void setStatus(Status status) {
-		this.status = status;
-	}
-
 	public StatusMesa getStatusMesa() {
 		return statusMesa;
 	}
 
 	public void setStatusMesa(StatusMesa statusMesa) {
 		this.statusMesa = statusMesa;
-	}
-
-	public Integer getQuantidadeMaxPessoas() {
-		return quantidadeMaxPessoas;
-	}
-
-	public void setQuantidadeMaxPessoas(Integer quantidadeMaxPessoas) {
-		this.quantidadeMaxPessoas = quantidadeMaxPessoas;
 	}
 
 }
