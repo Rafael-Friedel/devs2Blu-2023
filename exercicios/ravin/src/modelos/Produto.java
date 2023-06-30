@@ -1,18 +1,37 @@
 package modelos;
 
-import enums.Status;
-import enums.StatusPreparo;
+import enums.TipoProduto;
 
 public class Produto {
+	private int id;
 	private String nome;
 	private String descricao;
 	private String codigo;
-	private float precoCusto;
-	private float precoVenda;
-	private StatusPreparo statusPreparo;
+	private double precoCusto;
+	private double precoVenda;
 	private String tempoPreparo;
 	private String observacoes;
-	private Status status;
+	private TipoProduto tipoProduto;
+	private boolean ativo;
+
+	public Produto() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Produto(int id, String nome, String descricao, String codigo, double precoCusto, double precoVenda,
+			String tempoPreparo, String observacoes, TipoProduto tipoProduto, boolean ativo) {
+		super();
+		this.setId(id);
+		this.nome = nome;
+		this.descricao = descricao;
+		this.codigo = codigo;
+		this.precoCusto = precoCusto;
+		this.precoVenda = precoVenda;
+		this.tempoPreparo = tempoPreparo;
+		this.observacoes = observacoes;
+		this.setTipoProduto(tipoProduto);
+		this.setAtivo(ativo);
+	}
 
 	public String getNome() {
 		return nome;
@@ -38,7 +57,7 @@ public class Produto {
 		this.codigo = codigo;
 	}
 
-	public Float getPrecoCusto() {
+	public double getPrecoCusto() {
 		return precoCusto;
 	}
 
@@ -46,20 +65,12 @@ public class Produto {
 		this.precoCusto = precoCusto;
 	}
 
-	public Float getPrecoVenda() {
+	public double getPrecoVenda() {
 		return precoVenda;
 	}
 
 	public void setPrecoVenda(Float precoVenda) {
 		this.precoVenda = precoVenda;
-	}
-
-	public StatusPreparo getStatusPreparo() {
-		return statusPreparo;
-	}
-
-	public void setStatusPreparo(StatusPreparo statusPreparo) {
-		this.statusPreparo = statusPreparo;
 	}
 
 	public String getTempoPreparo() {
@@ -78,11 +89,27 @@ public class Produto {
 		this.observacoes = observacoes;
 	}
 
-	public Status getStatus() {
-		return status;
+	public TipoProduto getTipoProduto() {
+		return tipoProduto;
 	}
 
-	public void setStatus(Status status) {
-		this.status = status;
+	public void setTipoProduto(TipoProduto tipoProduto) {
+		this.tipoProduto = tipoProduto;
+	}
+
+	public boolean isAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
