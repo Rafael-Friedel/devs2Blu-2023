@@ -14,6 +14,11 @@ public class Pessoa {
 	private String oberservacao;
 	private boolean ativo;
 	
+	
+	public Pessoa() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Pessoa(int id, String nome, String endereco, String telefone, String cpf, Date dataNascimento,
 			String oberservacao, boolean ativo) {
 		super();

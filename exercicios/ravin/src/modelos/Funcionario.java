@@ -9,21 +9,35 @@ import enums.Status;
 import enums.Cargo;
 
 public class Funcionario extends Pessoa {
+	
 	private String rg;
 	private EstadoCivil estadoCivil;
 	private Escolaridade escolaridade;
 	private Cargo cargo;
-	private String numeroCarteiraTrabalho;
-	private Date dataAdmissão;
-	private Date dataDemissão;
+	private int pis;
+	private Date dataAdmissao;
+	private Date dataDemissao;
 	private Disponibilidade disponibilidade;
+
 	
-	public Funcionario(int id, String nome, String endereco, String telefone, String cpf, Date dataNascimento,
-			String observacao, Status ativo) {
-		super(id, nome, endereco, telefone, cpf, dataNascimento, observacao, ativo);
+	public Funcionario() {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Funcionario(String rg, EstadoCivil estadoCivil, Escolaridade escolaridade, Cargo cargo, Date dataAdmissao,
+			Date dataDemissao, Disponibilidade disponibilidade, int pis) {
+		super();
+		this.rg = rg;
+		this.estadoCivil = estadoCivil;
+		this.escolaridade = escolaridade;
+		this.cargo = cargo;
+		this.dataAdmissao = dataAdmissao;
+		this.dataDemissao = dataDemissao;
+		this.disponibilidade = disponibilidade;
+		this.pis = pis;
+	}
+	
+	
 	public String getRg() {
 		return rg;
 	}
@@ -56,30 +70,6 @@ public class Funcionario extends Pessoa {
 		this.cargo = cargo;
 	}
 
-	public String getNumeroCarteiraTrabalho() {
-		return numeroCarteiraTrabalho;
-	}
-
-	public void setNumeroCarteiraTrabalho(String numeroCarteiraTrabalho) {
-		this.numeroCarteiraTrabalho = numeroCarteiraTrabalho;
-	}
-
-	public Date getDataAdmissão() {
-		return dataAdmissão;
-	}
-
-	public void setDataAdmissão(Date dataAdmissão) {
-		this.dataAdmissão = dataAdmissão;
-	}
-
-	public Date getDataDemissão() {
-		return dataDemissão;
-	}
-
-	public void setDataDemissão(Date dataDemissão) {
-		this.dataDemissão = dataDemissão;
-	}
-
 	public Disponibilidade getDisponibilidade() {
 		return disponibilidade;
 	}
@@ -87,5 +77,35 @@ public class Funcionario extends Pessoa {
 	public void setDisponibilidade(Disponibilidade disponibilidade) {
 		this.disponibilidade = disponibilidade;
 	}
+	
+	public int getPis() {
+		return pis;
+	}
 
+	public void setPis(int pis) {
+		this.pis = pis;
+	}
+
+	public Date getDataAdmissao() {
+		return dataAdmissao;
+	}
+
+	public void setDataAdmissao(Date dataAdmissao) {
+		this.dataAdmissao = dataAdmissao;
+	}
+
+	public Date getDataDemissao() {
+		return dataDemissao;
+	}
+
+	public void setDataDemissao(Date dataDemissao) {
+		this.dataDemissao = dataDemissao;
+	}
+	
+	@Override
+	public String toString() {
+		return "Funcionario [rg=" + rg + ", estadoCivil=" + estadoCivil + ", escolaridade=" + escolaridade + ", cargo="
+				+ cargo + ", pis=" + pis + ", dataAdmissao=" + dataAdmissao + ", dataDemissao=" + dataDemissao
+				+ ", disponibilidade=" + disponibilidade + "]";
+	}
 }
