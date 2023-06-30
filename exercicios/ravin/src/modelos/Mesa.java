@@ -2,7 +2,6 @@ package modelos;
 
 import java.util.List;
 
-import enums.Status;
 import enums.StatusMesa;
 
 public class Mesa {

@@ -2,8 +2,6 @@ package modelos;
 
 import java.util.Date;
 
-import enums.Status;
-
 public class Pessoa {
 	private int id;
 	private String nome;

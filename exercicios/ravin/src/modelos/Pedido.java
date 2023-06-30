@@ -13,6 +13,10 @@ public class Pedido {
 	private String observacao;
 	private int quantidade;
 	
+	public Pedido() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Pedido(int id, Produto produto, Timestamp dataHoraSolicitacao, Timestamp dataHoraInicioPreparo,
 			Timestamp tempoPreparoRestante, StatusPreparo statusPreparo, String observacao, int quantidade) {
 		super();
