@@ -41,5 +41,4 @@ public class Cardapio {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-
 }

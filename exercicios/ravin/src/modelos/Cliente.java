@@ -1,33 +1,38 @@
 package modelos;
 
-import java.util.Date;
-
-import enums.Status;
-
 public class Cliente extends Pessoa {
 
-	public Cliente(int id, String nome, String endereco, String telefone, String cpf, Date dataNascimento,
-			String observacao, Status ativo) {
-		super(id, nome, endereco, telefone, cpf, dataNascimento, observacao, ativo);
+	private String alergias;
+	private boolean vip;
+	
+	public Cliente() {
 		// TODO Auto-generated constructor stub
 	}
 
-	private String endereço;
-	private String observação;
+	public Cliente(String alergias, boolean vip) {
+		super();
+		this.alergias = alergias;
+		this.vip = vip;
+	}
+
+	public String getAlergias() {
+		return alergias;
+	}
+
+	public void setAlergias(String alergias) {
+		this.alergias = alergias;
+	}
+
+	public boolean isVip() {
+		return vip;
+	}
+
+	public void setVip(boolean vip) {
+		this.vip = vip;
+	}
 	
-	public String getEndereço() {
-		return endereço;
-	}
-
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
-	}
-
-	public String getObservação() {
-		return observação;
-	}
-
-	public void setObservação(String observação) {
-		this.observação = observação;
+	@Override
+	public String toString() {
+		return "Cliente [alergias=" + alergias + ", vip=" + vip + " id " + super.getId() + "]";
 	}
 }
