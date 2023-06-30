@@ -1,17 +1,33 @@
 package modelos;
 
 import java.util.List;
-
 import enums.StatusComanda;
 
 public class Comanda {
+
+	private int id;
 	private Mesa mesa;
 	private Cliente cliente;
-	private String observacoes;
-	private List<Produto> produtos;
-	private StatusComanda statusComanda;
+	private List<Pedido> pedidos;
 	private String codigo;
-	private Float valorTotalComanda;
+	private String observacoes;
+	private StatusComanda statusComanda;
+
+	public Comanda() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Comanda(int id, Mesa mesa, Cliente cliente, List<Pedido> pedidos, String codigo,
+			String observacoes, StatusComanda statusComanda) {
+		super();
+		this.id = id;
+		this.mesa = mesa;
+		this.cliente = cliente;
+		this.pedidos = pedidos;
+		this.codigo = codigo;
+		this.observacoes = observacoes;
+		this.statusComanda = statusComanda;
+	}
 
 	public Mesa getMesa() {
 		return mesa;
@@ -29,12 +45,20 @@ public class Comanda {
 		this.cliente = cliente;
 	}
 
-	public List<Produto> getProdutos() {
-		return produtos;
+	public int getId() {
+		return id;
 	}
 
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
 	}
 
 	public StatusComanda getStatusComanda() {
@@ -51,14 +75,6 @@ public class Comanda {
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
-	}
-
-	public Float getValorTotalComanda() {
-		return valorTotalComanda;
-	}
-
-	public void setValorTotalComanda(Float valorTotalComanda) {
-		this.valorTotalComanda = valorTotalComanda;
 	}
 
 	public String getObservacoes() {
