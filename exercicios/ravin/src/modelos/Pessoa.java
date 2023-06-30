@@ -7,20 +7,24 @@ import enums.Status;
 public class Pessoa {
 	private int id;
 	private String nome;
+	private String endereco;
 	private String telefone;
-	private Date dataNascimento;
 	private String cpf;
-	private Status status;
-
+	private Date dataNascimento;
+	private String oberservacao;
+	private boolean ativo;
+	
 	public Pessoa(int id, String nome, String endereco, String telefone, String cpf, Date dataNascimento,
-			String observacao, Status ativo) {
+			String oberservacao, boolean ativo) {
 		super();
 		this.id = id;
 		this.nome = nome;
+		this.endereco = endereco;
 		this.telefone = telefone;
-		this.dataNascimento = dataNascimento;
 		this.cpf = cpf;
-		this.status = ativo;
+		this.dataNascimento = dataNascimento;
+		this.oberservacao = oberservacao;
+		this.ativo = ativo;
 	}
 
 	public String getNome() {
@@ -55,12 +59,28 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public Status getStatus() {
-		return status;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setStatus(Status status) {
-		this.status = status;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getOberservacao() {
+		return oberservacao;
+	}
+
+	public void setOberservacao(String oberservacao) {
+		this.oberservacao = oberservacao;
+	}
+
+	public boolean isAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
 	}
 
 	public int getId() {
